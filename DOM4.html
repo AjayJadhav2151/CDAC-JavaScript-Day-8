@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="data">Hello World</h1>
+
+    <script>
+        var shadow = document.getElementById('data');
+
+        shadow.addEventListener('mouseover', () => {
+            shadow.style.textShadow = '5px 5px 10px';
+        })
+        shadow.addEventListener('mouseout', () => {
+            shadow.style.textShadow = 'none';
+        })
+
+    </script>
+</body>
+</html>

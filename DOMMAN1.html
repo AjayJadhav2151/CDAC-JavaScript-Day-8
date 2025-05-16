@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>desktop</li>
+        <li>MyComputer</li>
+        <li>Folder</li>
+        <li>browser</li>
+        <li>WordDocuments</li>
+    </ul>
+    <button id="check" onclick="changelist()">Convert Text To Images</button>
+
+    <script>
+            function changelist() {
+                var checkbox = document.getElementById("check");
+                var linodes = document.getElementsByTagName("li")
+            
+                    for(var i = 0; i < linodes.length; i++) {
+                        var imgnode = document.createElement("img");
+                        var s = "/Day8/"+linodes[i].innerText+".jpeg";
+                        imgnode.setAttribute("src", s);
+                        imgnode.setAttribute("width", "200");
+                        imgnode.setAttribute("height", "200");
+                        linodes[i].replaceChild(imgnode,linodes[i].firstChild);
+                    }      
+            }
+    </script>
+</body>
+</html>

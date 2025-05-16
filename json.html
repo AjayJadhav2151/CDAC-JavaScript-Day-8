@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function showdetail() {
+        var s =
+          '{ "empid": 101, "name": "Ajay", "salary": "200000","isManager":true, "dept": { "deptno": "01", "dname": "Cs" }}';
+        var obj = JSON.parse(s);
+        document.write("<p>Empid:" + obj.empid + "</p>");
+        document.write("<p>Emp name:" + obj.name + "</p>");
+        document.write("<p>Salary:" + obj.salary + "</p>");
+        document.write("<p>Manager:" + obj.isManager + "</p>");
+        document.write("<p>Department number:" + obj.dept.deptno + "</p>");
+        document.write("<p>Department name:" + obj.dept.dname + "</p>");
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="showdetail()">CLICK</button>
+  </body>
+</html>
+  

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" onclick="newwindow()">Show Window</button>
+    <button onclick="closewindow()">Close Window</button>
+    <!-- <label>Enter width:</label> -->
+    <input type="text" id="width" placeholder="width"/>
+    <!-- <label>Enter height:</label> -->
+    <input type="text" id="height" placeholder="height"/>
+    <input type="text" id="xco" placeholder="x co-ordinates"/>
+    <input type="text" id="yco" placeholder="y co-ordinates"/>
+    <input type="text" id="newdata" placeholder="Enter text for new window"/>
+
+    <script>
+        let mywindow;
+        function newwindow(){
+            var data =  document.getElementById('btn');
+            let height = document.getElementById("height").value;
+            let width = document.getElementById("width").value;
+            let xco = document.getElementById("xco").value;
+            let yco = document.getElementById("yco").value;
+            let newdata = document.getElementById("newdata").value;
+
+            data.innerText="Hide Window";
+         mywindow = window.open("","Mywindow",`height=${height},width=${width},left=${yco},right=${xco}`);
+         mywindow.document.write(newdata);
+        } 
+        
+        function closewindow(){
+            if(confirm("Do u want to close?"))
+            mywindow.close();
+        }
+    </script>
+</body>
+</html>
